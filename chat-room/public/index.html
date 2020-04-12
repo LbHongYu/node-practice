@@ -1,0 +1,101 @@
+<!doctype html> 
+<html lang="zh-CN"> 
+    <head> 
+        <title>Chat</title> 
+        <meta charset = "utf-8">
+        <link rel='stylesheet' href='/css/icon/iconfont.css'></link> 
+        <link rel='stylesheet' href='/css/style.css'></link> 
+        <link rel='stylesheet' href='/css/reset.css'></link> 
+        <style>
+
+        </style>        
+    </head> 
+
+    <body> 
+        <div class='room-wrapper' id = "roomWrapper"> 
+          <div class="chat-box">
+              <!-- 消息区域 -->
+              <div class = box-left>
+                  <p class = "title-name">聊天室</p>
+                  <!-- 消息列表 -->
+                  <div class="message-wrapper" id = "messageWrapper">
+                        <ul class = "message-list" id = "messageList"> 
+                            <!-- 消息内容 -->
+                        </ul>
+                  </div>
+                  <div class="send-message-box">
+                      <div class = "chat-tool">
+                          <span class="sticker" id = "sticker">                           
+                              <i class="iconfont icon-biaoqing"></i>
+                          </span>
+                          <span class="image-tool">
+                                <input type="file" class = "file-input"/>
+                                <i class="iconfont icon-picture" id = "iconPhoto"></i>
+                          </span>  
+                          <!-- 表情 -->
+                          <div class = "stick-box" id = "stickBox">
+                            <span><img id ="emoji1" src="/img/emoji/emoji1.png"/></span>
+                            <span><img id ="emoji2" src="/img/emoji/emoji2.png"/></span>
+                            <span><img id ="emoji3" src="/img/emoji/emoji3.png"/></span>
+                            <span><img id ="emoji4" src="/img/emoji/emoji4.png"/></span>
+                            <span><img id ="emoji5" src="/img/emoji/emoji5.png"/></span>
+                            <span><img id ="emoji6" src="/img/emoji/emoji6.png"/></span>
+                            <span><img id ="emoji7" src="/img/emoji/emoji7.png"/></span>
+                            <span><img id ="emoji8" src="/img/emoji/emoji8.png"/></span>
+                            <span><img id ="emoji9" src="/img/emoji/emoji9.png"/></span>
+                            <span><img id ="emoji10" src="/img/emoji/emoji10.png"/></span>
+                            <span><img id ="emoji11" src="/img/emoji/emoji11.png"/></span>
+                            <span><img id ="emoji12" src="/img/emoji/emoji12.png"/></span>
+                            <span><img id ="emoji13" src="/img/emoji/emoji13.png"/></span>
+                            <span><img id ="emoji14" src="/img/emoji/emoji14.png"/></span>
+                            <span><img id ="emoji15" src="/img/emoji/emoji15.png"/></span>
+                            <span><img id ="emoji16" src="/img/emoji/emoji16.png"/></span>
+                            <span><img id ="emoji17" src="/img/emoji/emoji17.png"/></span>
+                            <span><img id ="emoji18" src="/img/emoji/emoji18.png"/></span>
+                            <span><img id ="emoji19" src="/img/emoji/emoji19.png"/></span>
+                            <span><img id ="emoji20" src="/img/emoji/emoji20.png"/></span>
+                            <span><img id ="emoji21" src="/img/emoji/emoji21.png"/></span>
+                            <span><img id ="emoji22" src="/img/emoji/emoji22.png"/></span>
+                            <span><img id ="emoji23" src="/img/emoji/emoji23.png"/></span>
+                            <span><img id ="emoji24" src="/img/emoji/emoji24.png"/></span>
+                            <span><img id ="emoji25" src="/img/emoji/emoji25.png"/></span>
+                            <span><img id ="emoji26" src="/img/emoji/emoji26.png"/></span>
+                            <span><img id ="emoji27" src="/img/emoji/emoji27.png"/></span>
+                            <span><img id ="emoji28" src="/img/emoji/emoji28.png"/></span>
+                            <span><img id ="emoji29" src="/img/emoji/emoji29.png"/></span>
+                            <span><img id ="emoji30" src="/img/emoji/emoji30.png"/></span>
+                          </div>                                                     
+                      </div>
+                      <textarea type="text" value = "message" id = "messageInput"></textarea>
+                      <div class="chat-action">
+                          <button class="action-button" id = "existBtn">退出</button>
+                          <button class="action-button" id = "sendBtn">发送</button>
+                      </div>
+                  </div>
+              </div>
+              <!-- 在线人员列表 -->
+              <div class = "box-right">
+                  <p class="person-online-title">在线人员</p>                  
+                  <div class="online-memebers" id = "onlineMemebers">
+                      <!-- 在线人员的头像 -->
+                  </div>
+
+              </div>
+          </div>  
+        </div> 
+        <div class="nickname-popup" id = "namePopup">
+            <!-- <h2>请输入你的昵称</h2> -->
+            <input type="text" id="nameIput" class = "name-input" placeholder="请输入昵称..." autocomplete="off"> 
+            <div class = "sex-input">
+                <label>性别： </label>
+                <input type="radio" id="maleRadio" name="sex" checked> <label for="男">男</label>                
+                <input type="radio" id="femaleRadio" name="sex" class = "female-radio"> <label for="女">女</label>                
+            </div>
+            <button id="nameBtn">确  定</button>
+        </div>        
+        <script src='/socket.io/socket.io.js' type='text/javascript'></script> 
+        <script src='http://code.jquery.com/jquery-1.8.0.min.js' type='text/javascript'></script> 
+        <script src='/js/chat.js' type='text/javascript'></script> 
+        <script src='/js/chat_ui.js' type='text/javascript'></script> 
+    </body> 
+</html> 

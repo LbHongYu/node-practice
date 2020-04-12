@@ -1,0 +1,265 @@
+.nickname-popup {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color:rgba(238, 238, 238, 0.8);
+    text-align: center;
+    padding-top: 35vh;
+}
+.nickname-popup .name-input {
+    width: 200px;
+    border: none;
+    border-bottom: 2px solid #bbb;
+    background-color: #f3f3f3;
+    font-size: 18px;
+    text-align: center;
+}
+.sex-input {
+    margin-top: 20px;
+}
+
+.female-radio{
+    margin-left: 16px;
+}
+.nickname-popup button {
+    display: block;
+    width: 100px;
+    height: 32px;
+    margin: 0 auto;
+    border: none;
+    background-color: #805b6b;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+.title-name {
+    line-height: 40px;
+    bottom: 100%;
+    background: rgb(240,240,240);
+    color: #2b2323db;
+    width: 100%;
+    /* font-weight: bold; */
+    padding-left: 8px;
+    font-size: 18px;
+}
+.room-wrapper {
+    background: url(/img/bg.jpg);
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    position: relative;
+    /* display: flex; */
+}
+
+.chat-box {
+    width: 800px;
+    height: 560px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    right: 0;
+    background: #fff;
+    display: flex;
+}
+
+.box-left {
+    background: rgb(240,240,240);
+    height: 100%;
+    vertical-align: top;
+    flex: 1;
+}
+
+/* 消息显示盒子 */
+.message-wrapper {
+    height: 388px;;
+    overflow: auto;
+    /* background: #2f9bb9; */
+}
+.send-message-box {
+    height: 132px;
+    position: relative;
+}
+.message-content {
+    padding-top: 20px;
+}
+.chat-tool {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    height: 28px;
+    border-top: 1px solid #8080803d;
+    line-height: 28px;
+    background: rgb(240,240,240);
+    user-select: none;    
+}
+
+.image-tool,
+.sticker {
+    position: relative;
+    cursor: pointer;
+    width: 28px;
+    text-align: center;
+    display: inline-block;
+}
+
+.image-tool:hover, 
+.sticker:hover {
+    background: #8080806b;
+}
+
+.file-input {
+    position: absolute;
+    height: 28px;
+    cursor: pointer;
+    width: 28px;
+    z-index: 2;
+    opacity: 0;
+}
+
+.stick-box {
+    position: absolute;
+    left: 4px;
+    bottom: 28px;
+    width: 314px;
+    padding: 6px;
+    background: #fff;
+    border-radius: 6px;
+    padding-bottom: 0;
+    display: none;
+} 
+.stick-box img {
+    width: 26px;
+    cursor: pointer;
+    display: inline-block;
+}
+.stick-box img:hover {
+    background: #8080806b;
+}
+.send-message-box textarea{
+    height: 104px;
+    width: 100%;
+    font-size: 14px;
+    padding: 6px;
+    margin-top: 28px;
+    background: rgb(240,240,240); 
+}
+.chat-action {
+    position: absolute;
+    bottom: 8px;
+    right: 6px;  
+}
+.action-button {
+    width: 60px;
+    cursor: pointer;
+}
+
+.message-item {
+    display: flex;
+
+}
+.message-item.left{
+    padding-left: 10px;
+}
+.message-item.right{
+    padding-left: 0;
+    padding-right: 10px;
+    justify-content: flex-end;   
+}
+
+.head-portrait {
+    width: 40px;
+}
+
+.head-portrait img {
+    width: 40px;
+    height: 40px;
+}
+.message-text-wrapper.left {
+    margin-left: 10px;
+    margin-right: 100px;
+}
+.message-text-wrapper.right {
+    margin-left: 0px;
+    margin-right: 10px;
+}
+
+.sender-name {
+    display: block;
+    font-size: 12px;
+    color: #808080cc;
+}
+.sender-name.right {
+    text-align: right;
+}
+.message-text {
+    margin-top: 6px;
+}
+.message-text img{
+    width: 26px;
+}
+.message-text p{
+    font-size: 14px;
+    background: #fff;
+    padding: 4px 8px;
+    border-radius: 4px;
+    max-width: 400px;
+}
+.message-list li {
+    margin-bottom: 20px;
+}
+
+.member-enter {
+    color: #888;
+    text-align: center;
+    font-size: 12px;
+}
+
+/* 人员列表 */
+.box-right {
+    width: 30%;
+    padding: 10px 6px;
+    overflow: auto;    
+}
+
+.online-memebers {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-between; */
+    align-content: flex-start;    
+}
+.person-online-title {
+    border-bottom: 1px solid #8080805c;
+    line-height: 30px;
+    margin-bottom: 6px;
+    padding-bottom: 6px;
+    color: #2b2323a1;    
+}
+.room-memeber {
+    margin: 8px;
+}
+.memeber-name {
+    width: 60px;
+    display: inline-block;
+    font-size: 12px;
+    color: #808080cc;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap; 
+    text-align: center;   
+}
+.room-memeber img {
+    width: 40px;
+    height: 40px;
+    display: block;
+    margin: 0 auto;
+}
